@@ -33,7 +33,7 @@ const swaggerDocs = (app, port) => {
         res.send(swaggerSpec)
     });
 
-    console.log(`Check the Doc in https://e-commerce-michael.up.railway.app/:${port}/api/v1/docs`);
+    console.log(`Check the Doc in https://e-commerce-michael.up.railway.app/api/v1/docs/`);
 }
 
 module.exports = swaggerDocs;
