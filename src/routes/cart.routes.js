@@ -31,7 +31,7 @@ const router = Router();
  *       - bearerAuth: []
  *     responses:
  *       200:
- *         description: Product created response
+ *         description: Gets user carts with the total price of it and a list o products in cart
  *         content:
  *           application/json:
  *             schema:
@@ -57,10 +57,10 @@ const router = Router();
  *         schema:
  *           type: integer
  *           minimum: 1
- *         description: productId
+ *         description: send the productId of the product you want to remove
  *     responses:
  *       200:
- *         description: inserted product response
+ *         description: Message and list of products removed from users cart.
  *         content:
  *           application/json:
  *             schema:
@@ -69,28 +69,9 @@ const router = Router();
  *                 message:
  *                   type: string
  *                   example: "product deleted succesfully"
- *                 removedProduct:
- *                   type: object
- *                   properties:
- *                     id:
- *                       type: integer
- *                       example: 23
- *                     cartId:
- *                       type: integer
- *                       example: 5
- *                     productId:
- *                       type: integer
- *                       example: 2
- *                     quantity:
- *                       type: integer
- *                       example: 3
- *                     price:
- *                       type: integer
- *                       example: 35000
- *                       
- *        
- */
-
+ *                 schema:
+ *                   $ref: "#/components/schemas/removedProduct"
+*/
 router.post('/cart', authenticate, addProductToCart);
 router.get('/cart', authenticate, getCartByUserId);
 router.delete('/cart/:id', authenticate, removeProductFromCart);

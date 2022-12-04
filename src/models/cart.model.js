@@ -53,6 +53,24 @@ const { DataTypes } = require('sequelize');
  *             price:
  *               type: integer
  *               example: 10000
+ *     removedProduct:
+ *       type: object
+ *       properties:
+ *         id:
+ *           type: integer
+ *           example: 23
+ *         cartId:
+ *           type: integer
+ *           example: 5
+ *         productId:
+ *           type: integer
+ *           example: 2
+ *         quantity:
+ *           type: integer
+ *           example: 3
+ *         price:
+ *           type: integer
+ *           example: 35000
  */
 
 const Cart = db.define(
