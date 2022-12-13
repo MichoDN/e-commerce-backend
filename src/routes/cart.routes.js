@@ -8,7 +8,7 @@ const router = Router();
  * @openapi
  * /api/v1/cart:
  *   post:
- *     summary: insert a new product in a user cart.
+ *     summary: Insert a new product in a user cart.
  *     tags: [Cart instertProduct]
  *     requestBody:
  *       description: To insert a product into your cart, you must send an object with productId and quantity properties
@@ -19,7 +19,7 @@ const router = Router();
  *             $ref: "#/components/schemas/CartInsert"
  *     responses:
  *       200:
- *         description: inserted product response
+ *         description: Request done succesfully.
  *         content:
  *           application/json:
  *             schema:
@@ -31,7 +31,7 @@ const router = Router();
  *       - bearerAuth: []
  *     responses:
  *       200:
- *         description: Gets user carts with the total price of it and a list o products in cart
+ *         description: Request done succesfully.
  *         content:
  *           application/json:
  *             schema:
@@ -60,7 +60,7 @@ const router = Router();
  *         description: send the productId of the product you want to remove
  *     responses:
  *       200:
- *         description: Message and list of products removed from users cart.
+ *         description: Request done succesfully.
  *         content:
  *           application/json:
  *             schema:

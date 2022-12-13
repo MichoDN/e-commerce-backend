@@ -11,7 +11,7 @@ const router = Router();
  *     summary: Create a new user
  *     tags: [User Register]
  *     requestBody:
- *       description: To register a new user you need a username, email and password
+ *       description: Required userName, email and password properties. email is unique, cannot be repeated.
  *       required: true
  *       content:
  *         application/json:
@@ -19,7 +19,7 @@ const router = Router();
  *             $ref: "#/components/schemas/userRegister"
  *     responses:
  *       200:
- *         description: OK
+ *         description: Request done succesfully.
  *         content:
  *           application/json:
  *             schema:
@@ -35,10 +35,10 @@ const router = Router();
  *     tags: [User GetInfo]
  *     security:
  *       - bearerAuth: []
- *     summary: Obtain users info using his bearerToken
+ *     summary: Obtain users
  *     responses:
  *       200:
- *         description: OK
+ *         description: Request done succesfully.
  *         content:
  *           application/json:
  *             schema:
@@ -48,10 +48,10 @@ const router = Router();
  *     tags: [User Delete]
  *     security:
  *       - bearerAuth: []
- *     summary: Delete Actual user using his bearerToken
+ *     summary: Delete user
  *     responses:
  *       200:
- *         description: OK
+ *         description: Request done succesfully.
  *         content:
  *           application/json:
  *             schema:
@@ -65,7 +65,7 @@ const router = Router();
 */
 
 router.post('/users/register', createUser);
-// router.get('/users', getAllUsers); //DEV
+router.get('/users', getAllUsers); //DEV 
 
 router.get('/users/info', authenticate, getUserById);
 router.delete('/users/delete', authenticate, deleteCart, deleteUser);

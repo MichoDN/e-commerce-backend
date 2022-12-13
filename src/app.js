@@ -11,7 +11,7 @@ app.use(express.json());
 initModels();
 
 db.authenticate()
-    .then(() => console.log('DB Authentication succsesful'))
+    .then(() => console.log('DB Authentication succesful'))
     .catch(err => console.log(err));
 
 db.sync({ force: false })

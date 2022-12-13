@@ -14,7 +14,7 @@ const router = Router();
  *     description: a
  *     responses:
  *       200:
- *         description: You must have available products in cart in order to make a purchase
+ *         description: Request done succesfully.
  *         content:
  *           application/json:
  *             schema:
@@ -27,7 +27,7 @@ const router = Router();
  *       - bearerAuth: []
  *     responses:
  *       200:
- *         description: Product created response
+ *         description: Request done succesfully.
  *         content:
  *           application/json:
  *             schema:

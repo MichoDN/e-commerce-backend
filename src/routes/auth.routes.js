@@ -6,7 +6,7 @@ const router = Router();
  * @openapi
  * /api/v1/auth/login:
  *   post:
- *     summary: Login
+ *     summary: Login with an exiting user
  *     tags: [User Login]
  *     requestBody:
  *       description: You will need email and password of the user previusly registered
@@ -24,7 +24,7 @@ const router = Router();
  *                 example: michael1234
  *     responses:
  *       200:
- *         description: Login
+ *         description: Request done succesfully.
  *         content:
  *           application/json:
  *             schema:

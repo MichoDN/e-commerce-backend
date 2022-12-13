@@ -18,7 +18,7 @@ const router = Router();
  *             $ref: "#/components/schemas/productRegister"
  *     responses:
  *       200:
- *         description: Product created response
+ *         description: Request done succesfully.
  *         content:
  *           application/json:
  *             schema:
@@ -34,7 +34,7 @@ const router = Router();
  *     tags: [Product GetAll]
  *     responses:
  *       200:
- *         description: Array of all products in store
+ *         description: Request done succesfully.
  *         content:
  *           application/json:
  *             schema:
@@ -57,7 +57,7 @@ const router = Router();
  *         description: productId
  *     responses:
  *       200:
- *         description: Product returned
+ *         description: Request done succesfully.
  *         content:
  *           application/json:
  *             schema:
@@ -75,7 +75,7 @@ const router = Router();
  *         description: productId
  *     responses:
  *       200:
- *         description: Product deleted
+ *         description: Request done succesfully.
  *         content:
  *           application/json:
  *             schema:
