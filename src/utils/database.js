@@ -15,5 +15,5 @@ const db = new Sequelize({
         }
     }
 });
-
+//Test push
 module.exports = db;
