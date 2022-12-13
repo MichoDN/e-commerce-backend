@@ -1,3 +1,5 @@
+require("dotenv").config();
+const SERVERHOST = process.env.SERVERHOST
 const swaggerJSDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
@@ -36,7 +38,7 @@ const swaggerDocs = (app, port) => {
         res.send(swaggerSpec)
     });
 
-    console.log(`Check the Doc in https://e-commerce-michael.up.railway.app/api/v1/docs/`);
+    console.log(`Check the Doc in ${SERVERHOST}/api/v1/docs/`);
 }
 
 module.exports = swaggerDocs;
